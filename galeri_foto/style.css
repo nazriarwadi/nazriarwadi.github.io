@@ -5,7 +5,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .Picture {
@@ -84,14 +83,15 @@ body {
   height: 66px;
 }
 .hero-btn .btn {
-  background-color: #D2B48C;
+  background-color: #D2B48C; /* Nuevo color de fondo */
+ 
   border: none;
   outline: none;
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
   display: inline-block;
-  width: 100%;
+  width: 400px;
   height: 66px;
   text-align: center;
   line-height: 66px;
@@ -99,27 +99,55 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
   border-radius: 6px;
   white-space: nowrap;
   text-overflow: ellipsis;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
   user-select: none;
+  -moz-appearance: none;
   cursor: pointer;
-  box-shadow: 0 15px 40px rgba(255, 227, 200, 0.5);
+  -webkit-appearance: none;
+  -moz-box-shadow: 0 15px 40px RGB (255, 227, 200);
+  -webkit-box-shadow: 0 15px 40px RGB (255, 227, 200);
+  box-shadow: 0 15px 40px RGB (255, 227, 200);
+  -moz-transform: perspective(600px) rotateX(0deg) scale(1);
+  -ms-transform: perspective(600px) rotateX(0deg) scale(1);
+  -webkit-transform: perspective(600px) rotateX(0deg) scale(1);
+  transform: perspective(600px) rotateX(0deg) scale(1);
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 .hero-btn .btn:hover {
-  background-color: #DEB887;
-  box-shadow: 0 20px 40px rgba(255, 227, 200, 0.7);
+  background-color: #DEB887; 
+  -moz-box-shadow: 0 20px 40px rgba(255, 227, 200);
+  -webkit-box-shadow: 0 20px 40px rgba(255, 227, 200);
+  box-shadow: 0 20px 40px rgba(225, 248, 220); 
 }
 .hero-btn .btn:active {
+  -moz-transform: perspective(600px) rotateX(15deg) scale(0.9);
+  -ms-transform: perspective(600px) rotateX(15deg) scale(0.9);
+  -webkit-transform: perspective(600px) rotateX(15deg) scale(0.9);
   transform: perspective(600px) rotateX(15deg) scale(0.9);
   font-size: 21px;
-  box-shadow: 0 20px 40px rgba(255, 227, 200, 0.7);
+  -moz-box-shadow: 0 20px 40px rgba(255, 227, 200);
+  -webkit-box-shadow: 0 20px 40px rgba(255, 227, 200);
+  box-shadow: 0 20px 40px rgba(255, 227, 200);
 }
 .active .hero-btn .btn:active {
+  -moz-transform: perspective(600px) rotateX(0deg) scale(1);
+  -ms-transform: perspective(600px) rotateX(0deg) scale(1);
+  -webkit-transform: perspective(600px) rotateX(0deg) scale(1);
   transform: perspective(600px) rotateX(0deg) scale(1);
   font-size: 22px;
-  box-shadow: 0 15px 40px rgba(255, 227, 200, 0.5);
+  -moz-box-shadow: 0 15px 40px rgba(255, 227, 200);
+  -webkit-box-shadow: 0 15px 40px rgba(255, 227, 200);
+  box-shadow: 0 15px 40px rgba(255, 227, 200);
 }
 .hero-btn .particles-circle {
   position: absolute;
@@ -130,7 +158,12 @@ body {
   left: 50%;
   margin-left: -15px;
   z-index: -1;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
   border-radius: 50%;
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
   transform: scale(0);
   visibility: hidden;
 }
@@ -663,6 +696,7 @@ body {
 .active .hero-btn .particles-circle:nth-of-type(35) {
   animation: particles-35 1.5s 0.875s;
 }
+
 @keyframes particles-36 {
   from {
     transform: scale(1);
@@ -686,6 +720,9 @@ body {
   width: 100%;
   max-height: 90vh;
   top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -694,6 +731,8 @@ body {
 }
 
 * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -753,9 +792,9 @@ h1 {
   display: none;
 }
 #textoAmor {
-  font-size: 60px;
+  font-size: 60px; /* Tamaño del texto aumentado */
   position: absolute;
-  top: -300px;
+  top: -300px; /* Ajuste de la posición superior */
   left: 50%;
   transform: translateX(-50%);
   color: #c54384;
@@ -764,62 +803,6 @@ h1 {
 }
 
 #textoAmor::after {
-  content: ' ♥';
-  color: red;
-}
-
-@media (max-width: 768px) {
-  .Picture-img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .Picture-note {
-    width: 200px;
-    height: 50px;
-    font-size: 1.2rem;
-  }
-
-  .hero-btn {
-    width: 300px;
-  }
-
-  .hero-btn .btn {
-    width: 300px;
-    font-size: 18px;
-    line-height: 50px;
-    height: 50px;
-  }
-
-  #textoAmor {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .Picture-img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .Picture-note {
-    width: 150px;
-    height: 40px;
-    font-size: 1rem;
-  }
-
-  .hero-btn {
-    width: 200px;
-  }
-
-  .hero-btn .btn {
-    width: 200px;
-    font-size: 16px;
-    line-height: 40px;
-    height: 40px;
-  }
-
-  #textoAmor {
-    font-size: 30px;
-  }
+  content: ' ♥'; /* Agregamos el corazón después del texto */
+  color: red; /* Cambiamos el color del corazón, puedes ajustarlo según tu preferencia */
 }
